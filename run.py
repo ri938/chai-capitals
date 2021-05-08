@@ -19,7 +19,14 @@ def usa():
 
 @cli.command()
 def europe():
-    quizbot = bot.EuropeanCapitolsQuizBot()
+    quizbot = bot.EuropeanCapitalsQuizBot()
+    t_room = TRoom([quizbot])
+    t_room.chat()
+
+
+@cli.command()
+def world():
+    quizbot = bot.WorldCapitalsQuizBot()
     t_room = TRoom([quizbot])
     t_room.chat()
 

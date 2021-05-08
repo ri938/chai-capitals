@@ -28,7 +28,8 @@ def usa():
         name='American State Capitals',
         image_url=url,
         description='Guess the state capitals',
-        bot=bot.USAStatesQuizBot
+        bot=bot.USAStatesQuizBot,
+        bot_uid=None
     )
 
 
@@ -41,7 +42,22 @@ def europe():
         name='European Capitals',
         image_url=url,
         description='Guess the European capital cities',
-        bot=bot.EuropeanCapitolsQuizBot
+        bot=bot.EuropeanCapitalsQuizBot,
+        bot_uid=None
+    )
+
+
+@cli.command()
+def world():
+    url = 'https://upload.wikimedia.org/wikipedia/commons' \
+          '/6/6f/Earth_Eastern_Hemisphere.jpg'
+
+    upload_bot(
+        name='World Capitals',
+        image_url=url,
+        description='Guess the world capital cities',
+        bot=bot.WorldCapitalsQuizBot,
+        bot_uid=None
     )
 
 
